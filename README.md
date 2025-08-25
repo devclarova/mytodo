@@ -1,46 +1,10 @@
-# Getting Started with Create React App
+# MyTodo 프로젝트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 프로젝트 개요
+  - 프로젝트명: MyTodo
+  - 슬로건: 당신의 하루를 더 간단하고 확실하게 관리하는 Todo 앱
+  - 설명: MyTodo는 사용자가 해야 할 일을 손쉽게 기록하고 완료 여부를 직관적으로 확인하며 우선순위에 따라 정리할 수 있도록 돕는 간단한 개인용 할 일 관리 서비스입니다.
+  - 목표
+    - 사용자가 빠르게 기록하고 쉽게 확인할 수 있는 최소한의 Todo 앱 제공
+    - React + useState 기반으로 직관적이고 간단한 인터페이스 구현
+    - 사용자 편의에 맞춘 기본 todo 서비스 제공 및 추후 확장성 고려
