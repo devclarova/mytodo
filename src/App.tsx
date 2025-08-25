@@ -5,31 +5,26 @@ import TodoList from './components/TodoList';
 import styled from '@emotion/styled';
 
 const Container = styled.div`
+  position: relative;
   max-width: 480px;
+  min-height: 400px;
   margin: 40px auto;
   padding: 20px;
   border-radius: 12px;
-  background: #fff;
+  background: #faffe2;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
   h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #8b87d6;
   }
 `;
 
-const GuideOverlay = styled.div`
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-`;
-
 const GuideBox = styled.div`
+  position: absolute;
+  top: 50px;
+  left: 40px;
   background: #fff;
   border-radius: 12px;
   padding: 30px 20px;
@@ -95,31 +90,31 @@ function App() {
 
   return (
     <Container>
-      <h1>MyTodo</h1>
-      <TodoWrite setTodos={setTodos} handleTodoUpdate={handleTodoUpdate} />
-      <TodoList
-        todos={todos}
-        onToggle={onToggle}
-        onDelete={onDelete}
-        onEdit={onEdit}
-        editingId={editingId}
-        setEditingId={setEditingId}
-      />
-
-      {showGuide && (
-        <GuideOverlay>
-          <GuideBox>
-            <h2>안내문</h2>
-            <p>이 앱은 간단한 할 일 관리 앱 MyTodo입니다.</p>
-            <ul>
-              <li>1. 상단 입력창에 할 일을 입력하고 추가하세요.</li>
-              <li>2. 완료하면 체크박스를 누르세요.</li>
-              <li>3. 수정 버튼으로 내용을 수정하세요.</li>
-              <li>4. 삭제 버튼으로 삭제하세요.</li>
-            </ul>
-            <ConfirmButton onClick={() => setShowGuide(false)}>확인</ConfirmButton>
-          </GuideBox>
-        </GuideOverlay>
+      {showGuide ? (
+        <GuideBox>
+          <h2>안내문</h2>
+          <p>이 앱은 간단한 할 일 관리 앱 MyTodo입니다.</p>
+          <ul>
+            <li>1. 상단 입력창에 할 일을 입력하고 추가하세요.</li>
+            <li>2. 완료하면 체크박스를 누르세요.</li>
+            <li>3. 수정 버튼으로 내용을 수정하세요.</li>
+            <li>4. 삭제 버튼으로 삭제하세요.</li>
+          </ul>
+          <ConfirmButton onClick={() => setShowGuide(false)}>확인</ConfirmButton>
+        </GuideBox>
+      ) : (
+        <>
+          <h1>MyTodo</h1>
+          <TodoWrite setTodos={setTodos} handleTodoUpdate={handleTodoUpdate} />
+          <TodoList
+            todos={todos}
+            onToggle={onToggle}
+            onDelete={onDelete}
+            onEdit={onEdit}
+            editingId={editingId}
+            setEditingId={setEditingId}
+          />
+        </>
       )}
     </Container>
   );

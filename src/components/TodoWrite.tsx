@@ -20,6 +20,9 @@ const Input = styled.input`
     border-color: #0070f3;
     box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
   }
+  &:focus::placeholder {
+    color: transparent;
+  }
 `;
 
 const Button = styled.button`
